@@ -1,0 +1,290 @@
+<html>
+	<head>
+	<title>AHAN Passw Generator
+	</title>
+
+		<style type="text/css">
+			*{
+			text-decoration:none
+			}
+			
+			.navbar{
+			border-radius:8px;
+			box-shadow:3px 4px 8px ;
+			font-family:serif;
+			
+			}
+			.navdiv{
+			width:100%;
+			background-color: #12486B;
+			border-radius:8px;
+			display:flex;
+			align-items:center;
+			justify-Content:space-between;
+			}
+			logo{
+			padding-left:10px;
+			padding-bottom:10px;
+			
+			}
+			.logo a{
+			font-size:35px;
+			font-weight:500;
+			/*margin-top:10px; */
+			color:white; 
+			}
+			
+			.pic{
+			border:1px solid;
+			border-radius:10px ;
+			border-color:black;
+			
+			margin-left:10px;
+			margin-top:8px;
+			
+			}
+			
+			.nli{
+			list-style:none;
+			display:inline-block;
+			}
+			
+			.nli a{
+			color:white;
+			font-size:18px;
+			font-weight:bold;
+			margin-right:25px;
+			}
+			
+			button{
+			background-color:#78D6C6;
+			color:white;
+			margin-left:10px;
+			margin-right:10px;
+			border:1px solid #12486B ; 
+			border-radius:5px;
+			padding:6px;
+			width:70px;
+			font-weight:600;
+			}
+			
+
+			.modal {
+			  display: none;
+			  position: relative; 
+			  z-index: 1; 
+			  margin:auto;
+			  width: 45%; 
+			  height:55%;
+			  border-radius:12px ;
+
+			  overflow: auto; 
+			  background-color: rgb(0,0,0);
+			  background-color: rgba(0,0,0,0.3); 
+			  padding-top: 35px;
+			  padding-bottom: 30px;
+			}
+			
+
+		/* Modal Content/Box */
+		.modal-content {
+		  background-color: #F5FCCD; 
+		  margin: 12px auto; 
+		  border: 1px solid rgba(0,0,0,0.3); 
+		  border-radius:8px;
+		  width: 70%;
+		  height:90%;
+		}
+
+		/* The Close Button */
+		.close {
+		  /* Position it in the top right corner outside of the modal */
+		  position: absolute;
+		  right: 25px;
+		  top: 0;
+		  color: #000;
+		  font-size: 35px;
+		  font-weight: bold;
+		}
+
+		/* Close button on hover */
+		.close:hover,
+		.close:focus {
+		  color: white;
+		  cursor: pointer;
+		}
+
+		/* Add Zoom Animation */
+		.animate {
+		  -webkit-animation: animatezoom 0.8s;
+		  animation: animatezoom 0.6s;
+		}
+
+		@-webkit-keyframes animatezoom {
+		  from {-webkit-transform: scale(0)}
+		  to {-webkit-transform: scale(1)}
+		}
+
+		@keyframes animatezoom {
+		  from {transform: scale(0)}
+		  to {transform: scale(1)}
+		}
+		.passin{
+		background-color: #ace3da;
+		margin:auto;width:30%;
+		border:1px inset #12486B;
+		border-radius:6px;
+		padding:10px;
+		text-align:center;
+		text-size:16px;
+		font-weight:500;
+		}
+		</style>
+		
+	</head>
+
+	<body style= "background: #419197">
+			<nav class="navbar">
+			<div class="navdiv" >
+			<div class="logo">
+				<a  href="#" >
+			  <img class="pic" src="Logo.png" alt="Logo" width="120" height="45">
+				</a>
+				<a href="#" style="margin-bottom:15px;" ><b>Password Generator</b></a>
+			</div>
+				<ul>
+				<li class="nli"><a href="#"  title="home style="text:white">
+				Home
+				</a></li>
+				<li class="nli"><a href="about page.html" taret="_blank" title="About">
+				About
+				</a></li>
+				<li class="nli"><button onclick="document.getElementById('id01').style.display='block'" >Login</button></li>
+				<li class="nli"><button onclick="document.getElementById('id02').style.display='block'" >SignUp</button></li>
+				</ul>
+			</div>
+			</nav>
+			<h1 style="text-align:center;" >Welcome to AHAN Password Generator</h1>
+
+		<!-- The Login Modal -->
+		<div id="id01" class="modal">
+		  <span onclick="document.getElementById('id01').style.display='none'"
+		class="close" title="Close Modal">&times;</span>
+
+		  <!-- Modal Content -->
+		  <form class="modal-content animate" action="post">
+			
+
+			<div class="container">
+				<div style="text-align:center;font-size:28px; margin-top:10px;">
+				<b>LogIn</b>
+				</div>
+				&nbsp;
+				&nbsp;
+				<div style="text-align:center ">
+				  <label for="uname"><b>Username</b></label>
+				  
+				  <input type="text" placeholder="Enter Username" name="uname" required>
+				</div>
+				&nbsp;
+				&nbsp;
+				<div style="text-align:center ">
+				  <label for="psw"><b>Password</b></label>
+				  
+				  <input type="password" placeholder="Enter Password" name="psw" required>
+				</div>
+				&nbsp;
+				&nbsp;
+				<div style="text-align:center ">
+				  <button type="submit">Login</button>
+				  <label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				  </label>
+				</div>
+				&nbsp;
+				&nbsp;
+				<div style="text-align:center">
+				  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				  <span class="psw">Forgot <a href="#">password ?</a></span>
+				</div>
+			</div>
+		  </form>
+		</div>
+		
+		<div id="id02" class="modal">
+		  <span onclick="document.getElementById('id02').style.display='none'"
+		class="close" title="Close Modal">&times;</span>
+
+		  <!-- SignUp Modal Content -->
+		  <form class="modal-content animate" action="post">
+			
+
+			<div class="container">
+				<div style="text-align:center;font-size:28px;margin-top:10px;">
+				<b>SignUp</b>
+				</div>
+				&nbsp;
+				<div style="text-align:center ">
+				  <label for="uname"><b>Name</b></label>
+				  <input type="text" placeholder="Enter name" name="name" required>
+				</div>
+				&nbsp;
+				<div style="text-align:center ">
+				  <label for="uname"><b>Username</b></label>
+				  <input type="text" placeholder="Enter Username" name="uname" required>
+				</div>
+				&nbsp;
+				<div style="text-align:center ">
+				  <label for="psw"><b>Set Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" required>
+				</div>
+				&nbsp;
+				<div style="text-align:center ">
+				  <button type="submit">SignUp</button>
+				  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+				</div>
+			</div>
+		  </form>
+		</div>
+		
+		<script>
+		
+		// Get the modal
+		var modal = document.getElementById('id01');
+		var modal = document.getElementById('id02');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		}
+		</script>
+		<div class="passin" >
+		<form action="post">
+		<label style="text-align:center;font-size:18px;"><b>Generate Password</b></label>
+		<br>
+		<label>ENTER REQUIRED DIGITS:</label>
+		<INPUT type="number" min="8" max="60" REQUIRED>
+		&nbsp;
+		<br>
+		<Button type="submit" style="margin-top:10px;"> Submit</Button>
+		</form>
+		</div>
+		&nbsp;
+		&nbsp;
+		
+		<div style="margin:auto;width:50%;padding:10px;background-color: rgba(0,0,0,0.2);border-radius:8px;font-size:18px;box-shadow:3px 5px 9px ;">
+			<h2>Tips for creating Strong password manully</h2>
+			<ul>
+			<li>Use alphabets in both upper and lower cases.</li>
+			<li>Use numbers.</li>
+			<li>Use special charachters like (!,@,#,$,%,^,*,etc).</li>
+			<li>Password should be at least 8 charachters.</li>
+			<li>Don't use one password every where.</li>
+			<li>Change your password at least once in a year.</li>
+			
+			</ul>
+		</div>
+	</body>
+</html>
